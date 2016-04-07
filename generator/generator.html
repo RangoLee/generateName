@@ -1,0 +1,19 @@
+<div id="generator">
+    <div class="row">
+        <h3>Choix du sexe: </h3>
+        <span class="radio-btn">
+            <input type="radio" name="sexe" id="sexe" ng-model="selectedSexe" value="M" ng-change="generateName()">Homme
+        </span>             
+        <span class="radio-btn">    
+            <input type="radio" name="sexe" id="sexe" ng-model="selectedSexe" value="F" ng-change="generateName()">Femme
+        </span>  
+    </div>
+
+    <div class="row">
+        <button ng-click="generateName()" class="btn">Générer</button>
+    </div>
+    <div ng-if="name" class="row">
+        <h3>Nom généré: </h3>
+        <span ng-bind="name"></span>
+    </div>  
+</div>
